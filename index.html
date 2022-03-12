@@ -1,9 +1,154 @@
 <!DOCTYPE html>
 <html>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<style>
+		@font-face {
+			font-family: 'MapoFlowerIsland';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'MapoPeacefull';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		body{
+			font-family: 'MapoFlowerIsland';
+			background-color: #fff8e3;
+			text-align:center;
+		}
+
+		.horiz{
+			border-top:1px solid goldenrod;
+			opacity: 1;
+		}
+
+		.date_title{
+			color:goldenrod;
+			font-size: 40pt;
+			font-weight: bold;
+			text-align:center;
+		}
+
+		.name_box{
+			color:goldenrod;
+			font-size: 20pt;
+			font-weight: bold;
+			text-align:center;
+			vertical-align:middle;
+		}
+
+		.btn.btn-primary{
+			background-color:gray;
+			border:none;
+			border-bottom: 2px solid #ccc;
+			border-right: 2px solid #ccc;
+			font-family: 'MapoPeacefull';
+			font-size:15pt;
+			padding:10px 20px;
+		}
+
+		.welcome_greetings_box{
+			color:black;
+			padding-top:30px;
+			text-align:center;
+			font-size:15pt;
+		}
+
+		.center{
+			display: flex;
+			align-items: center;
+			text-align:middle;
+		}
+
+	</style>
+
 	<head>
 		<title>Wedding Invitation, LucyKim & HMPark</title>
 	</head>
 	<body>
-		hello, world!
+		
+		<div class="container">
+			<hr class="horiz" style="margin-top:50px" />
+			<div class="row">
+				<div class="col date_title">
+					06.04
+				</div>
+			</div>
+			<hr class="horiz" />
+			<div class="row">
+				<div class="col">
+					사진
+				</div>
+			</div>
+			<hr class="horiz" />
+			<div class="row">
+				<div class="col name_box">
+					하명 <span style="font-size:12pt;line-height:29pt;vertical-align:top;">그리고</span> 래영<br />
+					2022.06.04 토요일 오전 11:00 
+					<br /> <br />
+					<button class="btn btn-primary">웨딩 사진 둘러보기</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col welcome_greetings_box" style="padding-bottom:50px">
+					<div style="padding-top:20px; padding-bottom:20px; text-align:center;">🌱</div>
+					작은 것에도 생동하는 마음을 가진<br>
+					세상이 놀이터 같은 사람을 만났습니다.<br><br>
+					오랜 시간을 함께한 저희 두사람,<br>
+					이제 평생의 친구이자<br>
+					서로에게 유일한 사람이 되고자 합니다.<br><br>
+					그 새로운 시작의 순간,<br>
+					귀한 걸음 하시어 축복해주시면<br>
+					큰 기쁨으로 간직하겠습니다.
+				</div>
+			</div>
+			<hr class="horiz" />
+			<div class="row" style="font-size:17pt">
+				<div class="col"></div>
+				<div class="col" style="font-weight:bold">
+					박정희<br>
+					김연순
+				</div>
+				<div class="col center" style="font-size:14pt">
+					의 아들
+				</div>
+				<div class="col center" style="font-weight:bold">
+					박하명
+				</div>
+				<div class="col"></div>
+			</div>
+			<div class="row" style="font-size:17pt; margin-top:30px;">
+				<div class="col"></div>
+				<div class="col" style="font-weight:bold">
+					장은봉
+				</div>
+				<div class="col center" style="font-size:14pt">
+					의 딸
+				</div>
+				<div class="col center" style="font-weight:bold">
+					김래영
+				</div>
+				<div class="col"></div>
+			</div>
+			<hr class="horiz" />
+			<div class="row">
+				<div class="col">
+					
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1400266754786!2d126.92051421565442!3d37.528196334079986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fcfde0c99d9%3A0xeba4e4a4b64140f3!2z642U7YyM7Yuw7JuAIOyXrOydmOuPhA!5e0!3m2!1sko!2skr!4v1647091372615!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 	</body>
 </html>
