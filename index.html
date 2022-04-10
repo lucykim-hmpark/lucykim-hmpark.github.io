@@ -445,7 +445,11 @@
 		<script>
 			document.getElementById("share_button").addEventListener('click', function(event){
 				if(navigator.share){
-					alert("성공!");
+					navigator.share({
+						title: "하명♥래영 결혼식 청첩장.",
+						text: "하명 그리고 래영의 결혼식에 당신을 초대합니다.",
+						url: "https://lucykim-hmpark.github.io"
+					})
 				}
 				else{
 					alert("예외!");
