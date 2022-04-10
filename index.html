@@ -308,7 +308,7 @@
 			<!-- <hr class="horiz" /> -->
 			<div class="row">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1400266754786!2d126.92051421565442!3d37.528196334079986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fcfde0c99d9%3A0xeba4e4a4b64140f3!2z642U7YyM7Yuw7JuAIOyXrOydmOuPhA!5e0!3m2!1sko!2skr!4v1647091372615!5m2!1sko!2skr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-				<div class="col" style="font-family:'nanumSquare'; text-align:left; font-size:13pt; margin-top:20px">
+				<div class="col" style="font-family:nanumSquare; text-align:left; font-size:13pt; margin-top:20px">
 					<b>더파티움 2층 파티움홀 (전화: 02-784-0000)</b><br>
 					서울특별시 영등포구 은행로 30 중소기업중앙회 (여의도동 16-2)<br><br>
 					
@@ -434,8 +434,22 @@
 					<div style="font-family:LeeSeoyun">행복하게 잘 살겠습니다!</div>
 					<div style="margin-top:80px"></div>
 					
+					<div style="font-family:nanumSquare;">
+						신랑 신부에게 마음 전하기
+
+						<button class="btn btn-primary"  onclick="location.href='sms:01067786636'"/>신랑에게 문자하기</button>
+						<button class="btn btn-primary"  onclick="location.href='tel:01067786636'"/>신랑에게 전화하기</button>
+						<button class="btn btn-primary"  onclick="location.href='sms:01067786636'"/>신랑 계좌번호 복사하기</button>	
+						
+
+					</div>
+					
+
+					
+					
+
 					<!-- <button class="btn btn-primary">청첩장 카톡으로 전달하기</button><br><br> -->
-					<button class="btn btn-primary" id="share_button">청첩장 공유하기</button>
+					<button class="btn btn-primary" id="share_button" style="line-height:30px"> <img src="resources/share-icon.svg" style="height:30px; vertical-align:text-top;"/> 청첩장 공유하기</button>
 
 					<div style="margin-top:100px"></div>
 				</div>
@@ -446,13 +460,19 @@
 			document.getElementById("share_button").addEventListener('click', function(event){
 				if(navigator.share){
 					navigator.share({
-						title: "하명♥래영 결혼식 청첩장.",
-						text: "하명 그리고 래영의 결혼식에 당신을 초대합니다.",
+						title: "하명♥래영 결혼식에 초대합니다!",
+						text: "2022년 6월 4일 토요일 오전 11시, 여의도 더파티움 2층 파티움홀",
 						url: "https://lucykim-hmpark.github.io"
 					})
 				}
 				else{
-					alert("예외!");
+					const t = document.createElement('textarea');
+					document.body.appendChild(t);
+					t.value = "하명♥래영 결혼식에 초대합니다! - 2022년 6월 4일 토요일 오전 11시, 여의도 더파티움 2층 파티움홀 - https://lucykim-hmpark.github.io"
+					t.select();
+					document.execCommand('copy');
+					document.body.removeChild(t);
+					alert("초대 링크가 복사되었습니다.");
 				}
 			})
 		</script>
