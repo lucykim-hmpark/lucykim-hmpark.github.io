@@ -20,10 +20,23 @@
 			font-weight: normal;
 			font-style: normal;
 		}
+		@font-face {
+			font-family: 'LeeSeoyun';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'HS-Regular';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
 		body{
 			font-family: 'MapoFlowerIsland';
-			background-color: #fff8e3;
+			background-color: #fff;
 			text-align:center;
+			font-size:17pt;
 		}
 
 		hr.horiz{
@@ -36,23 +49,28 @@
 		}
 
 		.date_title{
-			background: linear-gradient(40deg, #dba826, #ccae61 30%, #ffd15e 50%, #ffae17 70%, #cd9918 100%);
-    		-webkit-background-clip: text;
-    		-webkit-text-fill-color: transparent;
-			color:goldenrod;
-			font-size: 40pt;
-			font-weight: bold;
+			/* background: linear-gradient(40deg, #dba826, #ccae61 30%, #ffd15e 50%, #ffae17 70%, #cd9918 100%); */
+    		/* -webkit-background-clip: text; */
+    		/* -webkit-text-fill-color: transparent; */
+			/* color:goldenrod; */
+			font-size: 110pt;
+			line-height:75%;
+			margin-top:50px;
+			font-family:HS-Regular;
+			/* font-weight: bold; */
 			text-align:center;
 		}
 
 		.name_box{
-			background: linear-gradient(40deg, #dba826, #ccae61 30%, #e3b030 50%, #ffc42e 70%, #cd9918 100%);
-    		-webkit-background-clip: text;
-    		-webkit-text-fill-color: transparent;
-			color:goldenrod;
-			font-size: 20pt;
-			font-weight: bold;
+			/* background: linear-gradient(40deg, #dba826, #ccae61 30%, #e3b030 50%, #ffc42e 70%, #cd9918 100%); */
+    		/* -webkit-background-clip: text; */
+    		/* -webkit-text-fill-color: transparent; */
+			/* color:goldenrod; */
+			font-family:LeeSeoyun;
+			/* font-size: 20pt; */
+			/* font-weight: bold; */
 			text-align:center;
+			margin-top:45px;
 			vertical-align:middle;
 		}
 
@@ -107,6 +125,93 @@
 			line-height:41px;
 			font-weight:bold;
 		}
+		.yflower1{
+			position:absolute;
+			background-image:url('resources/yellow_flower.png');
+			width:130px;
+			height:130px;
+			right:0px;
+			background-size:cover;
+			transform: rotate(180deg);
+		}
+		.pflower1{
+			position:absolute;
+			background-image:url('resources/pink_flower.png');
+			width:70px;
+			height:70px;
+			left:20px;
+			top:50px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+
+		.pflower2{
+			position:absolute;
+			background-image:url('resources/pink_flower2.png');
+			width:50px;
+			height:50px;
+			left:140px;
+			top:140px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+		
+		.pflower3{
+			position:absolute;
+			background-image:url('resources/pink_flower.png');
+			width:30px;
+			height:30px;
+			left:84px;
+			top:234px;
+			background-size:cover;
+			z-index:-1;
+			transform: rotate(20deg);
+		}
+
+		.yflower2{
+			position:absolute;
+			background-image:url('resources/yellow_flower3.png');
+			width:70px;
+			height:70px;
+			right:40px;
+			top:280px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+
+		.yflower3{
+			position:absolute;
+			background-image:url('resources/yellow_flower2.png');
+			width:200px;
+			height:200px;
+			left:-54px;
+			bottom:47px;
+			background-size:cover;
+			z-index:-1;
+			transform: rotate(50deg);
+		}
+
+		.grass{
+			position:absolute;
+			background-image:url('resources/grass.png');
+			width:120px;
+			height:189px;
+			right:0px;
+			bottom:95px;
+			background-size:cover;
+			z-index:-2;
+			/* transform: rotate(-35deg); */
+		}
+
+		.btn_yellow{
+			background-color:#ffc107 !important;
+			border-radius:100px !important;
+			border-bottom:2px solid #ad985c !important;
+			width: 210px !important;
+		}
 	</style>
 
 	<head>
@@ -115,34 +220,57 @@
 	<body>
 		
 		<div class="container">
-			<hr class="horiz" style="margin-top:50px" />
-			<div class="row">
-				<div class="col date_title">
-					06.04
+			<div class="row" style="position:relative">
+				<div class="yflower1"></div>
+				<div class="pflower1"></div>
+				<div class="pflower2"></div>
+				<div class="pflower3"></div>
+				<div class="yflower2"></div>
+				<div class="col" style="font-family:LeeSeoyun; margin-top:50px;">
+					싱그러운 초여름,<br>
+					결혼합니다.
 				</div>
 			</div>
-			<hr class="horiz" />
+			<!-- <hr class="horiz" style="margin-top:50px" /> -->
+			<div class="row">
+				<div class="col date_title">
+					22<br>
+					06<br>
+					04
+				</div>
+			</div>
+			<!-- <hr class="horiz" />
 			<div class="row">
 				<div class="col">
 					사진
 				</div>
 			</div>
-			<hr class="horiz" />
-			<div class="row">
+			<hr class="horiz" /> -->
+			<div class="row" style="position:relative;">
+				<div class="yflower3"></div>
+				<div class="grass"></div>
 				<div class="col name_box">
 					하명 <span style="font-size:12pt;line-height:29pt;vertical-align:top;">그리고</span> 래영<br />
 					2022.06.04 토요일 오전 11:00 
 					<br /> <br />
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="margin-top:100px;margin-bottom:40px;background-color: #fff4c5;padding:10px 0px 10px 0px;box-shadow: 0px 0px 38px 24px #fff4c5;">
 				<div class="col">
-					<button class="btn btn-primary">사진 둘러보기</button>
+					<img src="resources/main_photo_20.jpg" style="width:100%; border:1px solid #f7e0a7"/>
+					<div style="margin-top:45px">
+						<button class="btn btn-primary btn_yellow" onclick="location.href='https://photos.app.goo.gl/ttrxLx7bXgEfWCuU8'">사진 둘러보기</button>
+					</div>
 				</div>
 			</div>
+			<!-- <div class="row">
+				
+			</div> -->
 			<div class="row">
 				<div class="col welcome_greetings_box" style="padding-bottom:50px">
-					<div style="padding-top:20px; padding-bottom:20px; text-align:center;">🌱</div>
+					<div style="margin-top:40px"></div>
+					<div style="width:70px; height:94px; background-size:cover; text-align:center; background-image:url('resources/flower_point1.png'); margin:0 auto;"></div>
+					<div style="margin-top:50px"></div>
 					작은 것에도 생동하는 마음을 가진<br>
 					세상이 놀이터 같은 사람을 만났습니다.<br><br>
 					오랜 시간을 함께한 저희 두사람,<br>
@@ -153,25 +281,29 @@
 					큰 기쁨으로 간직하겠습니다.
 				</div>
 			</div>
-			<hr class="horiz" />
+			<!-- <hr class="horiz" /> -->
 			<div class="row">
 				<div class="col">
 					<table style="margin:0 auto; font-size:17pt">
 						<tr>
 							<td style="font-weight:bold; padding:5px 30px;">박정희<br>김연순</td>
 							<td>의 아들</td>
-							<td style="font-weight:bold; padding:5px 30px;">박하명</td>
+							<td style="font-weight:bold; padding:5px 30px; color:#173">박하명</td>
 						</tr>
 						<tr>
 							<td style="font-weight:bold; padding:5px 30px;">장은봉</td>
 							<td>의 딸</td>
-							<td style="font-weight:bold; padding:5px 30px;">김래영</td>
+							<td style="font-weight:bold; padding:5px 30px; color:#173">김래영</td>
 						</tr>
 					</table>
+
+					<div style="margin-top:40px"></div>
+					<div style="width:79px; height:94px; background-size:cover; text-align:center; background-image:url('resources/flower_point2.png'); margin:0 auto;"></div>
+					<div style="margin-top:50px"></div>
 				</div>
+				
 			</div>
-			
-			<hr class="horiz" />
+			<!-- <hr class="horiz" /> -->
 			<div class="row">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1400266754786!2d126.92051421565442!3d37.528196334079986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fcfde0c99d9%3A0xeba4e4a4b64140f3!2z642U7YyM7Yuw7JuAIOyXrOydmOuPhA!5e0!3m2!1sko!2skr!4v1647091372615!5m2!1sko!2skr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				<div class="col" style="font-family:'nanumSquare'; text-align:left; font-size:13pt; margin-top:20px">
