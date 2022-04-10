@@ -439,7 +439,7 @@
 					<div style="margin-top:80px"></div>
 					
 					<div style="font-family:nanumSquare;">
-						<b style="font-size:15pt">신랑 신부에게 마음💕 전하기</b>
+						<b style="font-size:15pt">신랑 신부에게 마음💕을 전해주세요</b>
 						<div style="margin-top:30px"></div>
 						<span style="font-size:14pt">신랑에게 연락하기:</span>
 						<button class="btn" style="font-size:10pt" onclick="location.href='tel:01067786636'"><i class="bi bi-telephone-fill" style="font-size:20pt; vertical-align:middle"></i><br>전화</button>
@@ -451,8 +451,8 @@
 						<div style="margin-top:15px"></div>
 						
 						
-						<button class="btn btn-primary" onclick="javascript:copy_account('1002283880726', '우리은행', '신랑')"/>신랑 계좌번호 복사하기</button><br>
-						<button class="btn btn-primary" onclick="javascript:copy_account('1002283880726', '우리은행', '신부')"/>신부 계좌번호 복사하기</button>	
+						<button class="btn btn-primary" onclick="javascript:copy_account('1002283880726', '우리은행', '신랑', '박하명')"/>신랑 계좌번호 복사하기</button><br>
+						<button class="btn btn-primary" onclick="javascript:copy_account('1002283880726', '우리은행', '신부', '김래영')"/>신부 계좌번호 복사하기</button>	
 
 					</div>
 					
@@ -472,14 +472,14 @@
 		</div>
 		
 		<script>
-			function copy_account(account, bank, to){
+			function copy_account(account, bank, to, name){
 				const t = document.createElement('textarea');
 				document.body.appendChild(t);
 				t.value = account;
 				t.select();
 				document.execCommand('copy');
 				document.body.removeChild(t);
-				alert("["+bank+"] "+account+"\n"+to+" 계좌번호가 복사되었습니다.");
+				alert("["+bank+"] "+account+"\n"+to+" "+name+"의 계좌번호가 복사되었습니다.");
 			}
 			document.getElementById("share_button").addEventListener('click', function(event){
 				if(navigator.share){
