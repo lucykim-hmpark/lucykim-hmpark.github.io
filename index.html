@@ -530,30 +530,30 @@
 			location.href=youtube_url;
 		}
 
-		// function haha(data){
-		// 	for(i=0; i<data.length; i++){
-		// 		if(data[i]["start"] == "2022-06-04T11:00:00"){
-		// 			youtube_url = data[i]["url"];
-		// 			console.log(youtube_url);
-		// 		}
-		// 	}
-		// 	console.log(data);
-		// }
-		// function get_youtube_link(){
-		// 	console.log("oho?");
-		// 	$.ajax({
-		// 		dataType: "jsonp",
-		// 		url: "http://203.246.113.138:12345/",
-		// 		type: "GET",
-		// 		// data: {'s'e:s},
-		// 		success: function(data){
-		// 			console.log("hello?");
-		// 			console.log(data);
-		// 		}
-		// 	});
+		function haha(data){
+			for(i=0; i<data.length; i++){
+				if(data[i]["start"] == "2022-06-04T11:00:00"){
+					youtube_url = data[i]["url"];
+					console.log("youtube link is changed: " + youtube_url);
+				}
+			}
+			console.log(data);
+		}
+		function get_youtube_link(){
+			console.log("oho?");
+			$.ajax({
+				dataType: "jsonp",
+				url: "https://dmlab.kookmin.ac.kr:12345/",
+				type: "GET",
+				// data: {'s'e:s},
+				// success: function(data){
+				// 	console.log("youtube link is changed:");
+				// 	console.log(data);
+				// }
+			});
 
 			
-		// }
-		// get_youtube_link();
+		}
+		get_youtube_link();
 	</script>
 </html>
