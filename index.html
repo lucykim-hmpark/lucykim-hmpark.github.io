@@ -2,7 +2,7 @@
 <html>
 	<!-- Required meta tags -->
     <meta charset="utf-8">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
@@ -524,37 +524,36 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 
-		var youtube_url = "#";
+		var youtube_url = "https://www.youtube.com/embed/xQUhrBhLH1g";
 
 		function open_youtube(){
 			location.href=youtube_url;
 		}
 
-		function haha(data){
-			for(i=0; i<data.length; i++){
-				if(data[i]["start"] == "2022-06-04T11:00:00"){
-					youtube_url = data[i]["url"];
-					console.log(youtube_url);
-				}
-			}
-			console.log(data);
-		}
-		function get_youtube_link(){
-			console.log("oho?");
-			$.ajax({
-				dataType: "jsonp",
-				url: "http://203.246.113.138:12345/",
-				type: "GET",
-				// data: {'s'e:s},
-				success: function(data){
-					console.log("hello?");
-					console.log(data);
-				}
-			});
+		// function haha(data){
+		// 	for(i=0; i<data.length; i++){
+		// 		if(data[i]["start"] == "2022-06-04T11:00:00"){
+		// 			youtube_url = data[i]["url"];
+		// 			console.log(youtube_url);
+		// 		}
+		// 	}
+		// 	console.log(data);
+		// }
+		// function get_youtube_link(){
+		// 	console.log("oho?");
+		// 	$.ajax({
+		// 		dataType: "jsonp",
+		// 		url: "http://203.246.113.138:12345/",
+		// 		type: "GET",
+		// 		// data: {'s'e:s},
+		// 		success: function(data){
+		// 			console.log("hello?");
+		// 			console.log(data);
+		// 		}
+		// 	});
 
 			
-		}
-		console.log("hi?");
-		get_youtube_link();
+		// }
+		// get_youtube_link();
 	</script>
 </html>
