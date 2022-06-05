@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<style>
+		@font-face {
+			font-family: 'MapoFlowerIsland';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'MapoPeacefull';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'LeeSeoyun';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'HS-Regular';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		body{
+			font-family: 'MapoFlowerIsland';
+			background-color: #fff;
+			text-align:center;
+			font-size:17pt;
+		}
+
+		hr.horiz{
+			border-top:0 solid red;
+			background: linear-gradient(40deg, #e9b42e, #e9ce8b 30%, #e3b030 50%, #ffd66e 70%, #cd9918 100%);
+			height:1px;
+			opacity: 1;
+			width:80%;
+			margin:10px auto 15px;
+		}
+
+		.date_title{
+			/* background: linear-gradient(40deg, #dba826, #ccae61 30%, #ffd15e 50%, #ffae17 70%, #cd9918 100%); */
+    		/* -webkit-background-clip: text; */
+    		/* -webkit-text-fill-color: transparent; */
+			/* color:goldenrod; */
+			font-size: 110pt;
+			line-height:75%;
+			margin-top:50px;
+			font-family:HS-Regular;
+			/* font-weight: bold; */
+			text-align:center;
+		}
+
+		.name_box{
+			/* background: linear-gradient(40deg, #dba826, #ccae61 30%, #e3b030 50%, #ffc42e 70%, #cd9918 100%); */
+    		/* -webkit-background-clip: text; */
+    		/* -webkit-text-fill-color: transparent; */
+			/* color:goldenrod; */
+			font-family:LeeSeoyun;
+			/* font-size: 20pt; */
+			/* font-weight: bold; */
+			text-align:center;
+			margin-top:45px;
+			vertical-align:middle;
+		}
+
+		.btn.btn-primary{
+			background-color: #555;
+			border: none;
+			border-bottom:2px solid rgba(0,0,0,0.5);
+			font-family: 'MapoPeacefull';
+			font-size: 15pt;
+			padding: 10px 20px;
+			margin: 10px 0px 10px;
+			width: 300px;
+			border-radius: 100px;
+
+		}
+
+		.btn.btn-primary.btn_yellow{
+			background-color: #ffc107;
+			border-bottom:2px solid rgba(0,0,0,0.2);
+			width: 210px !important;
+		}
+
+		.welcome_greetings_box{
+			color:black;
+			padding-top:30px;
+			text-align:center;
+			font-size:15pt;
+		}
+
+		.center{
+			display: flex;
+			align-items: center;
+			text-align:middle;
+		}
+
+		.metro{
+			padding: 5px 10px;
+			background-color:black;
+			color:white;
+			border-radius:5px;
+			margin-top:10px;
+		}
+		.metro_sub{
+			text-align:left;
+			margin-bottom:20px;
+			margin-top:15px;
+		}
+
+		.calendar_date{
+			width:40px;
+			height:40px;
+			margin: 0 auto;
+			border-radius:100px;
+			text-align:center;
+			line-height:40px;
+		}
+		.the_date{
+			background-color:#fff;
+			font-size:15pt;
+			line-height:41px;
+			font-weight:bold;
+		}
+		.yflower1{
+			position:absolute;
+			background-image:url('resources/yellow_flower.png');
+			width:130px;
+			height:130px;
+			right:0px;
+			background-size:cover;
+			transform: rotate(180deg);
+		}
+		.pflower1{
+			position:absolute;
+			background-image:url('resources/pink_flower.png');
+			width:70px;
+			height:70px;
+			left:20px;
+			top:50px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+
+		.pflower2{
+			position:absolute;
+			background-image:url('resources/pink_flower2.png');
+			width:50px;
+			height:50px;
+			left:140px;
+			top:140px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+		
+		.pflower3{
+			position:absolute;
+			background-image:url('resources/pink_flower.png');
+			width:30px;
+			height:30px;
+			left:84px;
+			top:234px;
+			background-size:cover;
+			z-index:-1;
+			transform: rotate(20deg);
+		}
+
+		.yflower2{
+			position:absolute;
+			background-image:url('resources/yellow_flower3.png');
+			width:70px;
+			height:70px;
+			right:40px;
+			top:280px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(180deg); */
+		}
+
+		.yflower3{
+			position:absolute;
+			background-image:url('resources/yellow_flower22.png');
+			width:136px;
+			height:200px;
+			left:0px;
+			bottom:47px;
+			background-size:cover;
+			z-index:-1;
+			/* transform: rotate(50deg); */
+		}
+
+		.grass{
+			position:absolute;
+			background-image:url('resources/grass.png');
+			width:120px;
+			height:189px;
+			right:0px;
+			bottom:95px;
+			background-size:cover;
+			z-index:-2;
+			/* transform: rotate(-35deg); */
+		}
+
+		
+
+	</style>
+
+	<head>
+		<title>Wedding Invitation, LucyKim & HMPark</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" style="aspect-ratio:16/9; background-color:black;">
+				<iframe style="width:100%; height: 100%; padding:0" src="https://www.youtube.com/embed/xQUhrBhLH1g?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="row" style="background-color:black; padding-top: 20px; padding-bottom: 20px;">
+				<div class="col">
+					<div>
+						<button class="btn btn-primary" style="background-color:red" onclick="open_youtube()">유튜브 생중계 보러가기</button>
+					</div>
+					<div style="color:white; font-family:nanumSquare; font-size:11pt; padding-bottom:10px">
+						유튜브 생중계는 본식 시작 10분 전인 <br>
+						<b>6월 4일 오전 10시 50분</b> 부터 진행됩니다! <br>
+						이전에는 티저 영상으로 연결됩니다.
+					</div>
+				</div>
+			</div>
+			<div class="row" style="position:relative">
+				<div class="yflower1"></div>
+				<div class="pflower1"></div>
+				<div class="pflower2"></div>
+				<div class="pflower3"></div>
+				<div class="yflower2"></div>
+				<div class="col" style="font-family:LeeSeoyun; margin-top:50px;">
+					싱그러운 초여름,<br>
+					결혼합니다.
+				</div>
+			</div>
+			<!-- <hr class="horiz" style="margin-top:50px" /> -->
+			<div class="row">
+				<div class="col date_title">
+					22<br>
+					06<br>
+					04
+				</div>
+			</div>
+			<!-- <hr class="horiz" />
+			<div class="row">
+				<div class="col">
+					사진
+				</div>
+			</div>
+			<hr class="horiz" /> -->
+			<div class="row" style="position:relative;">
+				<div class="yflower3"></div>
+				<div class="grass"></div>
+				<div class="col name_box">
+					하명 <span style="font-size:12pt;line-height:29pt;vertical-align:top;">그리고</span> 래영<br />
+					2022.06.04 토요일 오전 11:00<br>
+					여의도 더파티움 2층 파티움홀
+					<br /> <br />
+				</div>
+			</div>
+			<div class="row" style="margin-top:100px;margin-bottom:40px;background-color: #fff4c5;padding:10px 0px 10px 0px;box-shadow: 0px 0px 38px 24px #fff4c5;">
+				<div class="col">
+					<img src="resources/main_photo_20.jpg" style="width:100%; border:1px solid #f7e0a7"/>
+					<div style="margin-top:45px">
+						<button class="btn btn-primary btn_yellow" onclick="location.href='https://photos.app.goo.gl/ttrxLx7bXgEfWCuU8'">사진 둘러보기</button>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="row">
+				
+			</div> -->
+			<div class="row">
+				<div class="col welcome_greetings_box" style="padding-bottom:50px">
+					<div style="margin-top:40px"></div>
+					<div style="width:70px; height:94px; background-size:cover; text-align:center; background-image:url('resources/flower_point1.png'); margin:0 auto;"></div>
+					<div style="margin-top:50px"></div>
+					작은 것에도 생동하는 마음을 가진<br>
+					세상이 놀이터 같은 사람을 만났습니다.<br><br>
+					오랜 시간을 함께한 저희 두사람,<br>
+					이제 평생의 친구이자<br>
+					서로에게 유일한 사람이 되고자 합니다.<br><br>
+					그 새로운 시작의 순간,<br>
+					귀한 걸음 하시어 축복해주시면<br>
+					큰 기쁨으로 간직하겠습니다.
+				</div>
+			</div>
+			<!-- <hr class="horiz" /> -->
+			<div class="row">
+				<div class="col">
+					<table style="margin:0 auto; font-size:17pt">
+						<tr>
+							<td style="font-weight:bold; padding:5px 30px;">박정희<br>김연순</td>
+							<td>의 아들</td>
+							<td style="font-weight:bold; padding:5px 30px; color:#173">박하명</td>
+						</tr>
+						<tr>
+							<td style="font-weight:bold; padding:5px 30px;">장은봉</td>
+							<td>의 딸</td>
+							<td style="font-weight:bold; padding:5px 30px; color:#173">김래영</td>
+						</tr>
+					</table>
+
+					<div style="margin-top:40px"></div>
+					<div style="width:79px; height:94px; background-size:cover; text-align:center; background-image:url('resources/flower_point2.png'); margin:0 auto;"></div>
+					<div style="margin-top:50px"></div>
+				</div>
+				
+			</div>
+			<!-- <hr class="horiz" /> -->
+			<div class="row">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1400266754786!2d126.92051421565442!3d37.528196334079986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fcfde0c99d9%3A0xeba4e4a4b64140f3!2z642U7YyM7Yuw7JuAIOyXrOydmOuPhA!5e0!3m2!1sko!2skr!4v1647091372615!5m2!1sko!2skr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<div class="col" style="font-family:nanumSquare; text-align:left; font-size:13pt; margin-top:20px">
+					<b>더파티움 2층 파티움홀 (전화: 02-784-0000)</b><br>
+					서울특별시 영등포구 은행로 30 중소기업중앙회 (여의도동 16-2)<br><br>
+					
+					<hr style='opacity:1'></hr>
+
+					<div style="text-align:center; font-weight:bold; font-size:15pt; margin-bottom:20px; margin-top:20px">지하철 이용 시</div>
+
+					<b class="metro" style="background-color:#aa9872">9호선</b>
+					<div class="metro_sub">국회의사당역 3번 출구 (도보 8분)</div>
+					
+					<b class="metro" style="background-color:#8b50a4">5호선</b>
+					<div class="metro_sub">
+						여의나루역 1번 출구 → 셔틀버스*이용 (약 11분) <br>
+						<span style="color:#888; font-size:11pt;vertical-align:top">*예식 1시간 전부터 셔틀버스 수시 운행</span><br>
+						여의나루역 2번 출구 → 영등포10 승차 후, '기계회관' 하차
+					</div>
+					<b class="metro" style="background-color:#0d3692">1호선</b>
+					<div class="metro_sub">
+						영등포역 6번 출구 → 마을버스 10번 승차 후, '기계회관' 하차
+					</div>
+
+					<hr style='opacity:1'></hr>
+
+					<div style="text-align:center; font-weight:bold; font-size:15pt; margin-bottom:20px; margin-top:20px">자가용 이용 시</div>
+					
+					<b class="metro" style="background-color:#fff; border:2px solid black; color:black">내비게이션</b>
+					<div class="metro_sub">
+						'여의도 더파티움' 또는 '중소기업중앙회관' 검색
+					</div>
+
+					<b class="metro" style="background-color:#fff; border:2px solid black; color:black">주차 안내</b>
+					<div class="metro_sub">
+						예식장(중소기업중앙회관) 건물 내 1시간 30분 무료<br>
+						(지하 1층 피로연장 입구 키오스크에서 출차 전에 무료 주차 등록 가능. 1시간 30분 이후 10분당 1000원 추가요금 발생.)<br>
+						만차 시, 건너편 '한국기계산업진흥회' 주차장(제2주차장) 이용<br>
+						<b>제2주차장 주소: 서울 영등포구 국회대로76길 22</b>
+					</div>
+
+					<div style="margin-top:70px"></div>
+					
+					
+
+				</div>
+			</div>
+
+			<div class="row" style="background-color:#e3f2e7; font-family:LeeSeoyun">
+				<div class="col" style='font-size:15pt;'>
+					<div style="font-size:23pt; margin:50px 0px 20px; font-family:HS-Regular">6월</div>
+					<table style="width:100%">
+						<tr style="height:50px">
+							<th style='font-weight:normal;'>S</th>
+							<th style='font-weight:normal;'>M</th>
+							<th style='font-weight:normal;'>T</th>
+							<th style='font-weight:normal;'>W</th>
+							<th style='font-weight:normal;'>T</th>
+							<th style='font-weight:normal;'>F</th>
+							<th style='font-weight:normal;'>S</th>
+						</tr>
+						<tr style="height:50px">
+							<td style="color:#e20000"></td>
+							<td></td>
+							<td></td>
+							<td style="color:#e20000">1</td>
+							<td>2</td>
+							<td>3</td>
+							<td style="color: rgb(40, 73, 161)"><div class="calendar_date the_date">4</div></td>
+						</tr>
+						<tr style="height:50px">
+							<td style="color:#e20000"><div class="calendar_date">5</div></td>
+							<td style="color:#e20000"><div class="calendar_date">6</div></td>
+							<td><div class="calendar_date">7</div></td>
+							<td><div class="calendar_date">8</div></td>
+							<td><div class="calendar_date">9</div></td>
+							<td><div class="calendar_date">10</div></td>
+							<td style="color: rgb(40, 73, 161);"><div class="calendar_date">11</div></td>
+						</tr>
+						<tr style="height:50px">
+							<td style="color:#e20000">12</td>
+							<td>13</td>
+							<td>14</td>
+							<td>15</td>
+							<td>16</td>
+							<td>17</td>
+							<td style="color: rgb(40, 73, 161)">18</td>
+						</tr>
+						<tr style="height:50px">
+							<td style="color:#e20000">19</td>
+							<td>20</td>
+							<td>21</td>
+							<td>22</td>
+							<td>23</td>
+							<td>24</td>
+							<td style="color: rgb(40, 73, 161)">25</td>
+						</tr>
+						<tr style="height:50px">
+							<td style="color:#e20000">26</td>
+							<td>27</td>
+							<td>28</td>
+							<td>29</td>
+							<td>30</td>
+							<td></td>
+							<td style="color: rgb(40, 73, 161)"></td>
+						</tr>
+					</table>
+					
+					<br><br>
+
+					2022년 6월 4일<br>
+					토요일 오전 11시<br><br>
+
+					여의도 더파티움 2층 파티움홀<br><br><br><br>
+					
+					
+				</div>
+
+				
+			</div>
+			<div class='row'>
+				<div class='col'>
+					<div style="margin-top:100px"></div>
+
+					<div style="margin-top:70px"></div>
+					<div style="width:119px; height:86px; background-size:cover; text-align:center; background-image:url('resources/two_of_us.jpg'); margin:0 auto;"></div>
+					<div style="font-family:LeeSeoyun">행복하게 잘 살겠습니다!</div>
+					<div style="margin-top:80px"></div>
+					
+					<div style="font-family:nanumSquare;">
+						<b style="font-size:15pt">신랑 신부에게 마음💕을 전해주세요</b>
+						<div style="margin-top:30px"></div>
+						<span style="font-size:14pt">신랑에게 연락하기:</span>
+						<button class="btn" style="font-size:10pt" onclick="location.href='tel:01067786636'"><i class="bi bi-telephone-fill" style="font-size:20pt; vertical-align:middle"></i><br>전화</button>
+						<button class="btn" style="font-size:10pt" onclick="location.href='sms:01067786636'"><i class="bi bi-chat-left-text" style="font-size:20pt; vertical-align:middle"></i><br>문자</button>
+						<div style="margin-top:15px"></div>
+						<span style="font-size:14pt">신부에게 연락하기:</span>
+						<button class="btn" style="font-size:10pt" onclick="location.href='tel:01071427826'"><i class="bi bi-telephone-fill" style="font-size:20pt; vertical-align:middle"></i><br>전화</button>
+						<button class="btn" style="font-size:10pt" onclick="location.href='sms:01071427826'"><i class="bi bi-chat-left-text" style="font-size:20pt; vertical-align:middle"></i><br>문자</button>
+						<div style="margin-top:15px"></div>
+						
+						
+						<button class="btn btn-primary" onclick="javascript:copy_account('1002283880726', '우리은행', '신랑', '박하명')"/>신랑 계좌번호 복사하기</button><br>
+						<button class="btn btn-primary" onclick="javascript:copy_account('48108052490', '우리은행', '신랑 혼주', '박정희')"/>신랑 혼주 계좌번호 복사하기</button><br>
+						<button class="btn btn-primary" onclick="javascript:copy_account('110303999219', '신한은행', '신부', '김래영')"/>신부 계좌번호 복사하기</button><br>
+						<button class="btn btn-primary" onclick="javascript:copy_account('110249797071', '신한은행', '신부 혼주', '장은봉')"/>신부 혼주 계좌번호 복사하기</button><br>
+
+					</div>
+					
+					<!-- <button class="btn btn-primary">청첩장 카톡으로 전달하기</button><br><br> -->
+					<div style="margin-top:100px"></div>
+				</div>
+			</div>
+			
+			<div class='row'>
+				
+					<button id="share_button" style="border:none;width:100%; padding:20px; font-family:MapoPeacefull; color:#555"><i class="bi bi-share-fill"></i>&nbsp; 청첩장 공유하기</button>
+				
+			</div>
+			<div class='row' style="background-color: black; padding: 10px; text-align: right; display: block;">
+				<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=lucykim-hmpark.github.io" style="width:100px" />
+			</div>
+		</div>
+		
+		<script>
+
+			function copy_account(account, bank, to, name){
+				const t = document.createElement('textarea');
+				document.body.appendChild(t);
+				t.value = account;
+				t.select();
+				document.execCommand('copy');
+				document.body.removeChild(t);
+				alert("["+bank+"] "+account+"\n"+to+" "+name+"의 계좌번호가 복사되었습니다.");
+			}
+			document.getElementById("share_button").addEventListener('click', function(event){
+				if(navigator.share){
+					navigator.share({
+						title: "하명♥래영 결혼식에 초대합니다!",
+						text: "2022년 6월 4일 토요일 오전 11시, 여의도 더파티움 2층 파티움홀",
+						url: "https://lucykim-hmpark.github.io"
+					})
+				}
+				else{
+					const t = document.createElement('textarea');
+					document.body.appendChild(t);
+					t.value = "하명♥래영 결혼식에 초대합니다! - 2022년 6월 4일 토요일 오전 11시, 여의도 더파티움 2층 파티움홀 - https://lucykim-hmpark.github.io"
+					t.select();
+					document.execCommand('copy');
+					document.body.removeChild(t);
+					alert("초대 링크가 복사되었습니다.");
+				}
+			})
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+
+		var youtube_url = "https://www.youtube.com/embed/xQUhrBhLH1g";
+
+		function open_youtube(){
+			location.href=youtube_url;
+		}
+
+		function haha(data){
+			for(i=0; i<data.length; i++){
+				if(data[i]["start"] == "2022-06-04T11:00:00"){
+					youtube_url = data[i]["url"];
+					console.log("youtube link is changed: " + youtube_url);
+				}
+			}
+			console.log(data);
+		}
+		function get_youtube_link(){
+			console.log("oho?");
+			$.ajax({
+				dataType: "jsonp",
+				url: "https://dmlab.kookmin.ac.kr:12345/",
+				type: "GET",
+				// data: {'s'e:s},
+				// success: function(data){
+				// 	console.log("youtube link is changed:");
+				// 	console.log(data);
+				// }
+			});
+
+			
+		}
+		get_youtube_link();
+		setInterval(get_youtube_link, 10000);
+	</script>
+</html>
